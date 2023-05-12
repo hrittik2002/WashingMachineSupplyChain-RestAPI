@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const ManufacturingSchema = new Schema(
   {
     SKU : {
-        type : String,
+        type : Object,
         required : true
     },
     startDate : {

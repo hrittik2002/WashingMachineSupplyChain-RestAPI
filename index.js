@@ -6,6 +6,9 @@ import { router as Register } from './routes/Register/registerAdmin.js';
 import { router as Login} from './routes/Login/login.js';
 import { router as Department } from './routes/Department/department.js';
 import { router as Item } from './routes/Item/Item.js';
+import { router as Manufacturing} from './routes/Manufacturing/Manufacturing.js';  
+import { router as Process } from './routes/Process/Process.js';
+import { router as SubProcess } from './routes/SubProcess/SubProcess.js';
 
 // basic configuration
 const app = express();
@@ -22,7 +25,9 @@ app.use('/api/register' , Register);
 app.use('/api/login', Login);
 app.use('/api/department' , Department);
 app.use('/api/item' , Item);
-
+app.use('/api/manufacturing' , Manufacturing)
+app.use('/api/process' , Process);
+app.use('/api/subProcess' , SubProcess);
 
 app.listen(PORT , ()=>{
     console.log("The backend server is running on " + PORT);

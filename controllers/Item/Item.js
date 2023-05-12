@@ -2,7 +2,7 @@ import Item from "../../models/Item.js";
 
 export const getAllItems = async(req , res) =>{
     try {
-        const items = await Item.find({ _id : req.body.id });
+        const items = await Item.findAll();
         res.json(items);
       } catch (err) {
         res.status(500).json({ message: err.message });
