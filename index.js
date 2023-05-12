@@ -5,6 +5,7 @@ import { connectDB } from './config/connectDB.js';
 import { router as Register } from './routes/Register/registerAdmin.js';
 import { router as Login} from './routes/Login/login.js';
 import { router as Department } from './routes/Department/department.js';
+import { router as Item } from './routes/Item/Item.js';
 
 // basic configuration
 const app = express();
@@ -20,7 +21,7 @@ connectDB()
 app.use('/api/register' , Register);
 app.use('/api/login', Login);
 app.use('/api/department' , Department);
-
+app.use('/api/item' , Item);
 
 
 app.listen(PORT , ()=>{
