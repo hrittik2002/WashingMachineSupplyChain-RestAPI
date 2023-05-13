@@ -1,4 +1,4 @@
-import HistoryData from "../../models/historyData.js";
+import HistoryData from "../../models/HistoryData.js";
 
 
 // get all sub processes
