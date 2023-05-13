@@ -1,6 +1,5 @@
 import SalesOrder from "../../models/SalesOrder.js";
 
-
 // get all sub processes
 export const getAllSalesOrder = async(req , res) => {
     try {

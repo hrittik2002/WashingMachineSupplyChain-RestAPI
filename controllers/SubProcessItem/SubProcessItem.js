@@ -16,11 +16,11 @@ export const getAllSubProcessItem = async(req , res) => {
 export const addNewSubProcessItem = async(req , res) => {
     try {
         const subprocessItem = new SubProcessItem({
-            componentId : res.body.componentId,
-            componentName : res.body.componentName,
-            componentDescription : res.body.componentDescription,
-            unitOfMeasure : res.body.unitOfMeasure,
-            requiredQuantity : res.body.requiredQuantity,
+            componentId : req.body.componentId,
+            componentName : req.body.componentName,
+            componentDescription : req.body.componentDescription,
+            unitOfMeasure : req.body.unitOfMeasure,
+            requiredQuantity : req.body.requiredQuantity,
         });
         await subprocessItem.save();
         res.status(200).send(subprocessItem);

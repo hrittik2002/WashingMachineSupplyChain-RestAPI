@@ -39,6 +39,7 @@ app.use('/api/HistoryData' , HistoryData);
 app.use('/api/SupplyPlanning' , SupplyPlanning)
 app.use('/api/bom' , Bom)
 
+
 app.listen(PORT , ()=>{
     console.log("The backend server is running on " + PORT);
 })

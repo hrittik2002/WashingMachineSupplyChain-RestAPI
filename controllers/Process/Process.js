@@ -3,7 +3,7 @@ import Process from "../../models/Process.js";
 // get all process
 export const getAllProcessData = async(req , res) => {
     try{
-        const processes = await Process.findAll();
+        const processes = await Process.find({});
         res.status(200).json(processes);
     }
     catch(err){

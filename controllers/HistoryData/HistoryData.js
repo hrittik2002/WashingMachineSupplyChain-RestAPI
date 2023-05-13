@@ -16,9 +16,11 @@ export const getAllHistoryData = async(req , res) => {
 export const addNewHistoryData = async(req , res) => {
     try {
         const historyOrder = new HistoryData({
-            orderStatus : req.data.orderStatus,
+            orderStatus : req.body.orderStatus,
+            statusDate : req.body.statusDate,
+            commentsOrNotes : req.body.commentsOrNotes
         });
-        await salesOrder.save();
+        await historyOrder.save();
         res.status(200).send(historyOrder);
       } catch (err) {
         console.log(err);

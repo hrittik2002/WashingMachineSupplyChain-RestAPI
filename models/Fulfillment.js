@@ -12,7 +12,7 @@ const FulfillmentSchema = new Schema(
         type : Number,
         required : true,
     },
-    shippingMehod: {
+    shippingMethod: {
         type : String,
         required : true,
     },

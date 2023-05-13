@@ -15,14 +15,14 @@ export const getAllSupplyPlanning = async(req , res) => {
 export const addNewSupplyPlanning = async(req , res) => {
     try {
         const supplyPlanning = new SupplyPlanning({
-            forecastedDemand : req.data.forecastedDemand,
-            actualDemand : req.data.actualDemand,
-            avaiableInventory : req.data.avaiableInventory,
-            reorderPoint : req.data.reorderPoint,
-            leadTime : req.data.leadTime,
-            orderQuantity : req.data.orderQuantity,
-            orderDate : req.data.orderDate,
-            receivedDate : req.data.receivedDate,
+            forecastedDemand : req.body.forecastedDemand,
+            actualDemand : req.body.actualDemand,
+            avaiableInventory : req.body.avaiableInventory,
+            reorderPoint : req.body.reorderPoint,
+            leadTime : req.body.leadTime,
+            orderQuantity : req.body.orderQuantity,
+            orderDate : req.body.orderDate,
+            receivedDate : req.body.receivedDate,
         });
         await supplyPlanning.save();
         res.status(200).send(supplyPlanning);

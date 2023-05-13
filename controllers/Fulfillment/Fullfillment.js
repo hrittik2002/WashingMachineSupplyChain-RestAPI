@@ -16,11 +16,11 @@ export const getAllFulfillment = async(req , res) => {
 export const addNewFulfillment = async(req , res) => {
     try {
         const fullfillment = new Fulfillment({
-            orderQuantity : req.status.orderQuantity,
-            shippedQuantity : req.status.shippedQuantity,
-            shippingMehod : req.status.shippingMehod,
-            shippingDate : req.status.shippingDate,
-            trackingNumber : req.status.trackingNumber
+            orderQuantity : req.body.orderQuantity,
+            shippedQuantity : req.body.shippedQuantity,
+            shippingMethod : req.body. shippingMethod,
+            shippingDate : req.body.shippingDate,
+            trackingNumber : req.body.trackingNumber
         });
         await fullfillment.save();
         res.status(200).send(fullfillment);
