@@ -1,6 +1,5 @@
 import SubProcessItem from "../../models/SubProcessItem.js";
 
-
 // get all sub processes
 export const getAllSubProcessItem = async(req , res) => {
     try {
