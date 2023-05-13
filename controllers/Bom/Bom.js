@@ -1,9 +1,9 @@
-import Bom from "../../models/Bom";
+import Bom from "../../models/Bom.js";
 
 // get all bom data
-export const getAllBomData = async () => {
+export const getAllBomData = async (req , res) => {
   try {
-    const items = await Bom.findAll();
+    const items = await Bom.find({});
     res.status(200).json(items);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -11,7 +11,7 @@ export const getAllBomData = async () => {
 };
 
 // create new dom data
-export const createDomData = async (data) => {
+export const createDomData = async (req , res) => {
   const bom = new Bom({
     SKU: req.body.SKU,
     componentName: req.body.componentName,
@@ -20,7 +20,7 @@ export const createDomData = async (data) => {
     cost: req.body.cost,
     isDefault: req.body.isDefault,
     leadTime: req.body.leadTime,
-    supplierId: req.body.supplierId,
+    SupplierId: req.body.SupplierId,
   });
 
   try {

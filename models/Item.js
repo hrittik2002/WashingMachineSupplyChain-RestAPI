@@ -28,7 +28,7 @@ const ItemSchema = new Schema(
       type : Number,
       required : true
     },
-    saftyStockLevel : {
+    safetyStockLevel : {
       type : Number,
       required : true
     }

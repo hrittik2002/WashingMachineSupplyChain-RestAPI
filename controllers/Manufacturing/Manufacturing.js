@@ -2,7 +2,7 @@ import Manufacturing from "../../models/Manufacturing.js";
 
 export const getAllManufacturingData = async (req, res) => {
   try {
-    const manufacturingOrders = await Manufacturing.findAll();
+    const manufacturingOrders = await Manufacturing.find({});
     res.json(manufacturingOrders);
   } catch (err) {
     console.error(err.message);
